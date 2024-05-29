@@ -1,0 +1,27 @@
+/* OT Bulb Classic 200 */
+@font-face {
+    font-family: "OTBulbClassic";
+    src: url("/static/OTBulb/OTBulbClassic-200.woff2") format("woff2");
+    font-weight: 200;
+}
+
+/* OT Bulb Classic 500 */
+@font-face {
+    font-family: "OTBulbClassic";
+    src: url("/static/OTBulb/OTBulbClassic-500.woff2") format("woff2");
+    font-weight: 500;
+}
+
+/* OT Bulb Reverse 200 */
+@font-face {
+    font-family: "OTBulbReverse";
+    src: url("/static/OTBulb/OTBulbReverse-200.woff2") format("woff2");
+    font-weight: 200;
+}
+
+/* OT Bulb Reverse 500 */
+@font-face {
+    font-family: "OTBulbReverse";
+    src: url("/static/OTBulb/OTBulbReverse-500.woff2") format("woff2");
+    font-weight: 500;
+}
