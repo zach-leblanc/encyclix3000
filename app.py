@@ -6,7 +6,20 @@ import spacy
 from nltk.corpus import wordnet as wn
 import nltk
 import os
+import git
 
+
+
+@app.route('/update_server', methods=['POST'])
+    def webhook():
+        if request.method == 'POST':
+            repo = git.Repo('/home/zachofall/')
+            origin = repo.remotes.origin
+origin.pull()
+return 'Updated PythonAnywhere successfully', 200
+        else:
+            return 'Wrong event type', 400
+            
 # Check if NLTK data is already downloaded
 nltk_data_path = os.path.expanduser('~') + '/nltk_data'
 if not os.path.exists(nltk_data_path + '/corpora/wordnet.zip'):
