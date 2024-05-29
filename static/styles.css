@@ -1,0 +1,259 @@
+* Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+/* Variables */
+:root {
+    --beige: #FFF7F4;
+    --orange-light: #FAA880;
+    --orange-dark: #FA541A;
+    --blue: #29245E;
+    --grey: #4A4A4A;
+}
+
+/* Body */
+body {
+    background-color: var(--blue) !important;
+    color: var(--blue) !important;
+}
+
+/* Typography */
+h1, h2 {
+    font-family: 'OtBulbReverse', Courier, monospace;
+    font-weight: 500;
+    font-style: normal;
+}
+
+p, span.word {
+    font-family: 'OtBulbClassic', Courier, monospace;
+    font-weight: 200;
+    font-style: normal;
+}
+
+span.word {
+    font-weight: 500;
+}
+
+button, form {
+    font-family: 'OTBulbReverse', Courier, monospace !important;
+    font-weight: 500 !important;
+    font-style: normal !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Counter */
+span#counter {
+    font-family: 'OTBulbReverse', Courier, monospace;
+    font-weight: 500;
+    font-style: normal;
+    font-size: xx-large;
+}
+
+/* Congrats Div */
+#congratsDiv {
+    display: none;
+    transition: ease-in-out 1000ms;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+#diss {
+    font-style: italic;
+    font-size: x-small;
+    margin-top: 11px;
+}
+
+/* Title */
+#title span {
+    font-weight: 500;
+    font-size: xx-large;
+}
+
+/* Summary */
+#summ {
+    display: flex;
+}
+
+.word {
+    background-color: var(--grey);
+    color: var(--grey);
+    padding: 2px;
+    margin: 2px;
+    min-width: 20px;
+    display: inline-block;
+    text-align: center;
+    user-select: none;
+    transition: ease-in-out 200ms;
+}
+
+.guessed {
+    background-color: transparent;
+}
+
+.green {
+    color: var(--orange-dark);
+    font-weight: bold;
+}
+
+.past-attempt {
+    font-style: italic;
+    font-size: smaller;
+}
+
+#past-list {
+    padding: 10px;
+    font-family: 'OTBulbMonoline', Courier, monospace;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Sup */
+sup {
+    font-weight: 200;
+    font-size: 0.3em !important;
+    top: -2.5em !important;
+}
+
+/* Header */
+#header {
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+/* Guess Input */
+#guessInput {
+    border-radius: 5px;
+    height: 1.5rem;
+    width: 12rem;
+    border: 1.5px solid var(--blue);
+    background-color: transparent;
+}
+
+#guessInput:focus,
+#guessInput:active {
+    outline: 1.5px solid var(--orange-light);
+}
+
+/* Buttons */
+.btn {
+    height: 1.75rem;
+    width: 9rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.btn.primary {
+    background-color: var(--orange-dark);
+    color: var(--beige);
+    box-shadow: rgba(0, 0, 0, 0.15) 3px 3px 9px -2px;
+}
+
+.btn.primary:hover {
+    box-shadow: rgba(0, 0, 0, 0.15) 4px 4px 9px -1px;
+    background-color: #E64F1A;
+}
+
+.btn.secondary {
+    background-color: var(--beige);
+    color: var(--orange-dark);
+    border: 1.5px solid var(--orange-dark) !important;
+}
+
+.btn.secondary:hover {
+    background-color: var(--orange-light);
+    border: none !important;
+}
+
+/* Miscellaneous */
+#title,
+#content,
+#refreshButton {
+    margin-bottom: 20px;
+}
+
+#counter {
+    margin: 10px;
+    font-weight: 500;
+    font-size: larger;
+}
+
+/* Vertical Line */
+.vl {
+    border-left: 6px solid var(--orange-dark);
+    border-radius: 4px;
+    height: 110px;
+    margin-bottom: -70px;
+    margin-top: -30px;
+}
+
+/* Dots */
+.dot {
+    background-color: var(--blue);
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    z-index: 998;
+}
+
+.quatre {
+    margin-left: 4px;
+}
+
+.moins-1 {
+    margin-left: -1px;
+}
+
+.treize {
+    margin-right: 9px;
+}
+
+.dots {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.vl-container {
+    z-index: 999;
+}
+
+.beige {
+    background-color: var(--beige);
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    z-index: 997;
+}
+
+#fullRow {
+    height: 200px;
+}
+
+/* Summary Container */
+.summary-container {
+    perspective: 1000px;
+    position: relative;
+    transition: transform 2.6s;
+}
+
+#congratsDiv {
+    transform: rotateY(180deg);
+}
+
+#reveal {
+    height: 3rem;
+}
+
+.summary-container.flipped {
+    transform: rotateY(180deg);
+}
